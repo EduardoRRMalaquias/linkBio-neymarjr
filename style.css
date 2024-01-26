@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+:root {
+  --font_banner: "Ysabeau Infant", sans-serif;
+  --font_estatisticas: "Montserrat", sans-serif;
+
+  --branco_trasparente: #ffffffcc;
+  --preto_trasparente: #000000cc;
+  --cinza_trasparente: #0200006e;
+  --amarelo: #ffdf00;
+  --verde: #009c3b;
+}
+
+/*Geral*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: var(--font_banner);
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  position: relative;
+}
+
+/* Banner */
+
+.banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+figure {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+figure::before {
+  content: "";
+  display: inline-block;
+  background: linear-gradient(90deg, var(--amarelo), var(--verde));
+  width: 215px;
+  height: 215px;
+  position: absolute;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.info h1::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--amarelo), var(--verde));
+  display: block;
+  position: absolute;
+  bottom: 4px;
+}
+
+.info h1::before {
+  content: "";
+  background-image: url(assets/img/verificado.png);
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  position: absolute;
+  right: -35px;
+  top: 40%;
+}
+
+.banner ul {
+  width: 768px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.banner ul li {
+  width: 100%;
+}
+
+.banner a {
+  background-color: var(--cinza_trasparente);
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.banner a img {
+  width: 25px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.banner a:hover {
+  background-color: white;
+  color: black;
+}
+
+/*estatiscas*/
+
+.estatisticas {
+  background-image: url(assets/img/imagem-de-fundo.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* tabela*/
+
+table td,
+table th {
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cabecalho th {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+table th {
+  font-size: 1.2rem;
+}
+
+table tr:nth-last-of-type(even) {
+  background-color: var(--preto_trasparente);
+  color: white;
+}
+
+table tr:nth-last-of-type(odd) {
+  background-color: var(--branco_trasparente);
+  color: black;
+}
+
+.titulo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.titulo img {
+  width: 30px;
+}
